@@ -8,3 +8,6 @@ const example = () => {
 };
 
 window.example = example;
+
+
+
