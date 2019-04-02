@@ -12,7 +12,7 @@ const contenedor=document.getElementById("contenedor");
 const mostrarPokemones=document.getElementById("mostrarPokemones");
 const pokemonesFiltrados = document.getElementById("tiposPokemon");
 const orden=document.getElementById("orden-pokemon");
-const limpiar=document.getElementById("limpiar");
+// const limpiar=document.getElementById("limpiar");
 
 //Imprimir lista de pokemones
 const listaDePokemones = (data) => {
