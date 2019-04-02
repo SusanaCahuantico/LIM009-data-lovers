@@ -1,135 +1,48 @@
+/* Manejo del DOM 
+const selectOrder = document.getElementById('select-order');
+const selectFilterType = document.getElementById('select-filter-type');
+const containerList = document.getElementById('container-list');
+const dataPokemon = POKEMON.pokemon;
+    */
 /* Manejo del DOM */
-const root = document.getElementById('root');
-const orderAz = document.getElementById('order-Az');
-const orderZa = document.getElementById('order-Za');
-const tipoPokemon = document.getElementById('filterForElements');
-const arrayPokemon = POKEMON.pokemon;
 
-const poki = (pokedex) => {
-  for (let i = 0; i < POKEMON.pokemon.length; i++) {
-    root.innerHTML += `
-      <div>
-        <p>Number: ${pokedex[i].id}</p>
-        <p>Name: ${pokedex[i].name}</p>
-        <p>Type: ${pokedex[i].type}</p>
-        <figure>
-          <img src="${pokedex[i].img}" alt="perfil" class="img-profile">
-       </figure>
-      </div> 
-    `;
-  }
+const totalPokemons = POKEMON.pokemon;
+const arrListaPokemones= pokemon.listaPokemons(totalPokemons);
+const contenedor=document.getElementById("contenedor");
+const mostrarPokemones=document.getElementById("mostrarPokemones");
+const pokemonesFiltrados = document.getElementById("tiposPokemon");
+const orden=document.getElementById("orden-pokemon");
+const limpiar=document.getElementById("limpiar");
+
+//Imprimir lista de pokemones
+const listaDePokemones = (data) => {
+	let mostrar = '';
+	for (let i = 0; i < data.length; i++) {
+    box = `
+    <div>
+	<img  src="${ data[i].img}" />
+	<p> Nombre : ${ data[i].name}</p>
+	<p> Tipo : ${ data[i].type}</p>
+	</div>
+`;
+	mostrar += box;
+	};
+	contenedor.innerHTML = mostrar;
 }
 
-const orderAz = () => {
-    const 
-}
+//Mostrar pokemones
+mostrarPokemones.addEventListener("click", function(){
+  listaDePokemones(arrListaPokemones)
+});
 
-const filtrarTipo = () => {
-  const arrayFiltrado = pokemon.filtrarPokemones(arrayPokemon, tipoPokemon.value);
+//Mostrar los pokemones por orde
+orden.addEventListener("change",()=>{
+  const ordenando= pokemon.ordenPokemones(totalPokemons, orden.value);
+	listaDePokemones(ordenando);
+} );
 
-}
-
-poki(POKEMON.pokemon)
-
-main js
-/* Manejo del DOM */
-const root = document.getElementById('root');
-const orderAz = document.getElementById('order-Az');
-const orderZa = document.getElementById('order-Za');
-const tipoPokemon = document.getElementById('filterForElements');
-const arrayPokemon = POKEMON.pokemon;
-
-const poki = (pokedex) => {
-  for (let i = 0; i < POKEMON.pokemon.length; i++) {
-    root.innerHTML += `
-      <div>
-        <p>Number: ${pokedex[i].id}</p>
-        <p>Name: ${pokedex[i].name}</p>
-        <p>Type: ${pokedex[i].type}</p>
-        <figure>
-          <img src="${pokedex[i].img}" alt="perfil" class="img-profile">
-       </figure>
-      </div> 
-    `;
-  }
-}
-
-const orderAz = () => {
-    const 
-}
-
-const filtrarTipo = () => {
-  const arrayFiltrado = pokemon.filtrarPokemones(arrayPokemon, tipoPokemon.value);
-
-}
-
-poki(POKEMON.pokemon)
-
-main js
-/* Manejo del DOM */
-const root = document.getElementById('root');
-const orderAz = document.getElementById('order-Az');
-const orderZa = document.getElementById('order-Za');
-const tipoPokemon = document.getElementById('filterForElements');
-const arrayPokemon = POKEMON.pokemon;
-
-const poki = (pokedex) => {
-  for (let i = 0; i < POKEMON.pokemon.length; i++) {
-    root.innerHTML += `
-      <div>
-        <p>Number: ${pokedex[i].id}</p>
-        <p>Name: ${pokedex[i].name}</p>
-        <p>Type: ${pokedex[i].type}</p>
-        <figure>
-          <img src="${pokedex[i].img}" alt="perfil" class="img-profile">
-       </figure>
-      </div> 
-    `;
-  }
-}
-
-const orderAz = () => {
-    const 
-}
-
-const filtrarTipo = () => {
-  const arrayFiltrado = pokemon.filtrarPokemones(arrayPokemon, tipoPokemon.value);
-
-}
-
-poki(POKEMON.pokemon)
-
-main js
-/* Manejo del DOM */
-const root = document.getElementById('root');
-const orderAz = document.getElementById('order-Az');
-const orderZa = document.getElementById('order-Za');
-const tipoPokemon = document.getElementById('filterForElements');
-const arrayPokemon = POKEMON.pokemon;
-
-const poki = (pokedex) => {
-  for (let i = 0; i < POKEMON.pokemon.length; i++) {
-    root.innerHTML += `
-      <div>
-        <p>Number: ${pokedex[i].id}</p>
-        <p>Name: ${pokedex[i].name}</p>
-        <p>Type: ${pokedex[i].type}</p>
-        <figure>
-          <img src="${pokedex[i].img}" alt="perfil" class="img-profile">
-       </figure>
-      </div> 
-    `;
-  }
-}
-
-const orderAz = () => {
-    const 
-}
-
-const filtrarTipo = () => {
-  const arrayFiltrado = pokemon.filtrarPokemones(arrayPokemon, tipoPokemon.value);
-
-}
-
-poki(POKEMON.pokemon)
-
+//Filtrar pokemones por tipo
+pokemonesFiltrados.addEventListener("change", () => {
+	const filtrandoPokemones = pokemon.filtrarPokemones(totalPokemons, pokemonesFiltrados.value);
+  listaDePokemones(filtrandoPokemones);
+});

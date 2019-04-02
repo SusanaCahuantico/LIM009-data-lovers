@@ -11,33 +11,35 @@
   <body>
     <div>
       <h1>POKEMON</h1>
-    <div id="root">
-      <button id="order-Az">Ordenar de A-Z</button>
-      <br>
-      <button id="order-Za">Ordenar de Z-a</button>
-      <br>
-      <br>
+    
+      <div class="Filters">
+          <button id=mostrarPokemones>Mostrar Pokemones</button>
+          <select class="select" id="orden-pokemon">
+              <option>Ordenar</option>
+              <option value="ordenaz" >A - Z</option>
+              <option value="ordenza" >Z - A</option>
+          </select>
 
-      <label for="">Filtrado por tipo de elementos</label>
-
-      <select id="filterForElements">
-        <option value="grass" id="grass">Grass</option>
-        <option value="poison" id="poison">Poison</option>
-        <option value="fire" id="fire">Fire</option>
-        <option value="flying" id="flying">Flying</option>
-        <option value="bug" id="bug">Bug</option>
-        <option value="normal" id="normal">Normal</option>
-        <option value="electric" id="electric">Electric</option>
-        <option value="ground" id="ground">Ground</option>
-        <option value="fighting" id="fighting">Fighting</option>
-        <option value="psychic" id="psychic">Psychic</option>
-        <option value="rock" id="rock">Rock</option>
-        <option value="ice" id="ice">Ice</option>
-        <option value="ghost" id="ghost">Ghost</option>
-        <option value="dragon" id="dragon">Dragon</option>
+      <select id="tiposPokemon">
+        <option value="">Pokemon por tipo</option>
+        <option value="grass">Grass</option>
+        <option value="poison">Poison</option>
+        <option value="fire">Fire</option>
+        <option value="flying">Flying</option>
+        <option value="bug">Bug</option>
+        <option value="normal">Normal</option>
+        <option value="electric">Electric</option>
+        <option value="ground">Ground</option>
+        <option value="fighting">Fighting</option>
+        <option value="psychic">Psychic</option>
+        <option value="rock">Rock</option>
+        <option value="ice">Ice</option>
+        <option value="ghost">Ghost</option>
+        <option value="dragon">Dragon</option>
       </select>
       
     </div> 
+    <div id="contenedor">
   </div>
        <script src="./data/pokemon/pokemon.js"></script>
        <script src="data.js"></script>

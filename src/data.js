@@ -1,47 +1,72 @@
-const mostrarPokemones = (pokedex) => {
-  let arrayMostrar = [];
-  for (let i = 0; i < data.length; i++) {
-    arrayMostrar.push({
-      name: data[i].name,
-      img: data[i].img,
-      type: data[i].type
-    });
-  }
-  return arrayMostrar;
+/* Manejo de data */
+
+// esta es una función de ejemplo
+// puedes ver como agregamos la función a nuestro objeto global window
+
+//Lista de pokemones y caracteristicas
+const listaPokemons=(data)=>{
+  let arraLista=[];
+  for(let i=0; i<data.length;i++){
+    arraLista.push({name: data[i].name, img: data[i].img, type: data[i].type})
+  }return arraLista;
 };
 
-// ordenar alfabeticamente
-const ordenarPorLetra = () => {
-  const arrPokemon = POKEMON.pokemon;
-  const alfabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
-  let arrOrder = [];
-
-  for (let j = 0; j < alfabet.length; j++) {
-    for (let i = 0; i < arrPokemon.length; i++) {
-      if (alfabet[j] === arrPokemon[i].name.charAt(0)) {
-        arrOrder.push(arrPokemon[i]);
-      }
-    }
-  }
-  return arrOrder;
+//funcion filtra los tipos de pokemones
+const filtrarPokemones = (data, tipo) => {
+	let arrayFiltra = [];
+	arrayFiltra = data
+		.filter((elemento) => {
+			for (let i = 0; i < elemento.type.length; i++) {
+				if (elemento.type[i] === tipo) {
+					return 1;
+				}
+			}
+		});
+	return arrayFiltra;
 }
 
-
-
-const filtrarPokemones = (pokedex, tipo) => {
-  let arrayFiltrar = [];
-  arrayFiltrar = pokedex.filter((elemento) => {
-    for (let i = 0; i < elemento.type.length; i++) {
-      if (elemento.type[i] === tipo) {
-        return 1;
-      }
+//Funcion ordenar pokemones asc y desc
+const ordenPokemones=(data,orden)=>{
+  let pokemones=[];
+  for(let i=0; i<data.length;i++){
+    pokemones.push({name: data[i].name, img: data[i].img, type: data[i].type})
+  }
+  pokemones.sort((a,b)=>{
+    if(typeof a === 'string' && typeof b === 'string'){
+      a = a.toLowerCase();
+      b = b.toLowerCase();  
+    }  
+    if (a.name > b.name) {
+      return 1;
+    } else if (a.name < b.name) {
+      return -1;
+    } else if (a.name === b.name) {
+      return 0;
     }
-  });
-  return arrayFiltrar;
-};
+  } 
+   )
+   if (orden === 'ordenaz') {
+		return pokemones;
+  }
+  else if(orden==='ordenza')
+  return pokemones.reverse();
+   }
 
- window.pokemon = {
-    mostrarPokemones,
-ordenarPorLetra,
-filtrarPokemones,
- };
+/* Ordenado ascendente */
+//console.log(namePokemon.sort(sortArrs))
+
+const computeStats=(data)=>{
+
+   
+}
+/* arrMultiplicadores=[];
+   for(let i=0; i<POKEMON.pokemon.length;i++){
+     arrMultiplicadores.push(POKEMON.pokemon[i].multipliers)
+   }console.log(arrMultiplicadores);
+   */
+
+window.pokemon = {
+  listaPokemons, 
+  filtrarPokemones, 
+  ordenPokemones
+};
