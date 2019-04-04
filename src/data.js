@@ -14,8 +14,7 @@ const listaPokemons=(data)=>{
 //funcion filtra los tipos de pokemones
 const filtrarPokemones = (data, tipo) => {
 	let arrayFiltra = [];
-	arrayFiltra = data
-		.filter((elemento) => {
+	arrayFiltra = data.filter((elemento) => {
 			for (let i = 0; i < elemento.type.length; i++) {
 				if (elemento.type[i] === tipo) {
 					return 1;
@@ -52,21 +51,22 @@ const ordenPokemones=(data,orden)=>{
   return pokemones.reverse();
    }
 
-/* Ordenado ascendente */
-//console.log(namePokemon.sort(sortArrs))
+const promediandoPokemones =(data)=>{
+ const introduce = data.map(peso => peso.weight);
+ let arr=[];
+ let suma = 0;
+ for (let i=0; i< introduce.length; i++) {
+   arr = parseFloat(introduce[i].split(" ",1));
+   suma+=arr;
+   }
+  return suma/data.length;
+  }
 
-const computeStats=(data)=>{
 
-   
-}
-/* arrMultiplicadores=[];
-   for(let i=0; i<POKEMON.pokemon.length;i++){
-     arrMultiplicadores.push(POKEMON.pokemon[i].multipliers)
-   }console.log(arrMultiplicadores);
-   */
-
-window.pokemon = {
+window.pokemon = { 
   listaPokemons, 
   filtrarPokemones, 
-  ordenPokemones
+  ordenPokemones,
+  promediandoPokemones
 };
+
