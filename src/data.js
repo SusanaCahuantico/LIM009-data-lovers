@@ -14,7 +14,7 @@ const filtrarPokemones = (data, tipo) => {
 	arrayFiltra = data.filter((elemento) => {
 			for (let i = 0; i < elemento.type.length; i++) {
 				if (elemento.type[i] === tipo) {
-					return 1;
+					return tipo;
 				}
 			}
 		});
@@ -48,6 +48,7 @@ const ordenPokemones=(data,orden)=>{
   return pokemones.reverse();
    }
 
+   // Promediando el peso de los pokemones
 const promediandoPokemones =(data)=>{
  const introduce = data.map(peso => peso.weight);
  let arr=[];
