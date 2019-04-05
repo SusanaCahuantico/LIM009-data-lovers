@@ -1,9 +1,6 @@
 /* Manejo de data */
 
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
-
-//Lista de pokemones y caracteristicas
+// Creando la función lista de pokemones
 const listaPokemons=(data)=>{
   let arraLista=[];
   for(let i=0; i<data.length;i++){
@@ -11,7 +8,7 @@ const listaPokemons=(data)=>{
   }return arraLista;
 };
 
-//funcion filtra los tipos de pokemones
+//Funcion de filtrado por tipos de pokemones
 const filtrarPokemones = (data, tipo) => {
 	let arrayFiltra = [];
 	arrayFiltra = data.filter((elemento) => {
@@ -59,7 +56,7 @@ const promediandoPokemones =(data)=>{
    arr = parseFloat(introduce[i].split(" ",1));
    suma+=arr;
    }
-  return suma/data.length;
+  return (suma/data.length).toFixed(2);
   }
 
 

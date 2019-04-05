@@ -1,19 +1,12 @@
-/* Manejo del DOM 
-const selectOrder = document.getElementById('select-order');
-const selectFilterType = document.getElementById('select-filter-type');
-const containerList = document.getElementById('container-list');
-const dataPokemon = POKEMON.pokemon;
-    */
 /* Manejo del DOM */
-
-const totalPokemons = POKEMON.pokemon;
-const arrListaPokemones= pokemon.listaPokemons(totalPokemons);
-const contenedor=document.getElementById("contenedor");
+    
+const allData = POKEMON.pokemon;
+const arrListaPokemones= pokemon.listaPokemons(allData);
+const container=document.getElementById("container");
 const mostrarPokemones=document.getElementById("mostrarPokemones");
 const pokemonesFiltrados = document.getElementById("tiposPokemon");
 const orden=document.getElementById("orden-pokemon");
 const promedioPokemon = document.getElementById("promedioPokemon");
-// const limpiar=document.getElementById("limpiar");
 
 //Imprimir lista de pokemones
 const listaDePokemones = (data) => {
@@ -28,7 +21,7 @@ const listaDePokemones = (data) => {
 `;
 	mostrar += box;
 	};
-	contenedor.innerHTML = mostrar;
+	container.innerHTML = mostrar;
 }
 
 //Mostrar pokemones
@@ -38,31 +31,18 @@ mostrarPokemones.addEventListener("click", function(){
 
 //Mostrar los pokemones por orde
 orden.addEventListener("change",()=>{
-  const ordenando= pokemon.ordenPokemones(totalPokemons, orden.value);
+  const ordenando= pokemon.ordenPokemones(allData, orden.value);
 	listaDePokemones(ordenando);
 } );
 
 //Filtrar pokemones por tipo
 pokemonesFiltrados.addEventListener("change", () => {
-	const filtrandoPokemones = pokemon.filtrarPokemones(totalPokemons, pokemonesFiltrados.value);
+	const filtrandoPokemones = pokemon.filtrarPokemones(allData, pokemonesFiltrados.value);
   listaDePokemones(filtrandoPokemones);
 });
 
 // Evaluando promedio de pokemones
 promedioPokemon.addEventListener("click", function(){
-const promediando = pokemon.promediandoPokemones(totalPokemons);
+const promediando = pokemon.promediandoPokemones(allData);
 promedio.innerHTML=( "El peso promedio de todos los pokemones es " + promediando + "Kg.");
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
