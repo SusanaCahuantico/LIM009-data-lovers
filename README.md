@@ -1,6 +1,12 @@
 # POKEMON
 
-## Índice
+## Definición
+
+Nuestro proyecto está dirigido a un público amante de los POKEMON y público en general, la web se basa en la información básica de los pokemones, en la cual podrás ubicar a cada pokemon filtrado por tipos de elementos, ordenado alfabeticamente, y también obtendrás un peso promedio de todos los pokemones.
+
+## Historia de usuario
+
+
 
 * [Preámbulo](#preámbulo)
 * [Descripción](#resumen-del-proyecto)
