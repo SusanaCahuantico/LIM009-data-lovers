@@ -18,14 +18,18 @@
           <nav class="menu">
           
             <div class="filtrado">
-             <button id="mostrarPokemones">Pokemones</button>
+            <ul>
+            <li> <button id="mostrarPokemones">Pokemones</button></li>
             
-             <select class="select" id="orden-pokemon">
+             <li>
+               <select class="select" id="orden-pokemon">
               <option>Ordenar</option>
               <option value="ordenaz" >A - Z</option>
               <option value="ordenza" >Z - A</option>
              </select>
+            </li> 
 
+            <li>
              <select class="tiposPokemon" id="tiposPokemon">
               <option value="">Filtrado por tipo</option>
               <option value="Grass">Hierba</option>
@@ -44,7 +48,12 @@
               <option value="Ghost">Fantasma</option>
               <option value="Dragon">Dragon</option>
              </select>
+            </li>
+            <li>
              <button id="botonPromedio">Promedio del peso de los Pokemones</button>
+            </li>
+
+            </ul>
              </div>
           </nav>
       </div>      

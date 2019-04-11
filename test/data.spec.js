@@ -71,11 +71,11 @@ describe('ordenPokemones', () => {
 const promedioTest = "resultPromedio";
 const resultadoPromedio = 45.95;
 
-describe('ordenPokemones', () => {
+describe('promediandoPokemones', () => {
   it('Debe retornar la función', () => {
-    expect(typeof window.pokemon.ordenPokemones).toBe('function');
+    expect(typeof window.pokemon.promediandoPokemones).toBe('function');
   });
   it('debería retornarme', () => {
-    expect(window.pokemon.ordenPokemones(dataChic, promedioTest)).toEqual(sortResultDesc);
+    expect(window.pokemon.promediandoPokemones(dataChic, promedioTest)).toEqual(resultadoPromedio);
   });
 });
