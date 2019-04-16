@@ -1,5 +1,5 @@
 /* Manejo del DOM */
-    
+
 const allData = POKEMON.pokemon;
 const arrListaPokemones = pokemon.listaPokemons(allData);
 const container = document.getElementById('container');
@@ -26,7 +26,7 @@ const listaDePokemones = (data) => {
 };
 
 // Mostrar pokemones
-mostrarPokemones.addEventListener('click', function() {
+mostrarPokemones.addEventListener('click', () => {
   listaDePokemones(arrListaPokemones);
 });
 

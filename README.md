@@ -15,6 +15,8 @@ Nuestro proyecto está dirigido a un público amante de los POKEMON y público e
 
 ## Prototipo de baja fidelidad
 
+![alt text]()
+
 ## Prototipo de alta fidelidad
 
 
