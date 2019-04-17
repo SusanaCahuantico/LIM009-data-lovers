@@ -14,7 +14,7 @@ Nuestro proyecto está dirigido a un público amante de los POKEMON y público e
 
 ## Prototipo de baja fidelidad
 
-![alt text](src/prototipo-baja.jpg)
+![alt text](https://github.com/SusanaCahuantico/LIM009-data-lovers/blob/master/src/prototipo-baja.jpg.jpeg)
 
 ## Prototipo de alta fidelidad
 
