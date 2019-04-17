@@ -19,7 +19,9 @@ Nuestro proyecto está dirigido a un público amante de los POKEMON y público e
 
 ## Prototipo de alta fidelidad
 
+https://www.figma.com/file/YBpc4GPJGmCuO5UkGIKXY431/Prototipado-Pokemon
 
+https://www.figma.com/file/YBpc4GPJGmCuO5UkGIKXY431/Prototipado-Pokemon?node-id=0%3A1
 
 ## Objetivos de aprendizaje
 
