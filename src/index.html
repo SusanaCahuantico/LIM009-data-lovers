@@ -5,35 +5,25 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0"/>
     <title>Data Lovers</title>
     <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/fontello.css"/>
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet"/>
   
   </head>
   <body>
-    <header>
-      <h1 id="motor"></h1>
-      <button id="botoncito">Botoncito</button>     
-      
+    <header class="center">
+      <div>
+        <h1 class="logo">POKEMON</h1>
+      </div>      
+
       <div class="contenedor">
-         <h1 class="logo">POKEMON</h1>
-         <input type="checkbox" id="menu-bar">
-         <label class="icon-menu" for="menu-bar"></label>
-          <nav class="menu">
-          
-            <div class="filtrado">
-            <ul>
-            <li> <button id="mostrarPokemones">Pokemones</button></li>
-            
-             <li>
-               <select class="select" id="orden-pokemon">
-              <option>Ordenar</option>
+       <div>
+        <button id="mostrarPokemones" class="btn">Pokemones</button>
+               <select class="seleccion" id="orden-pokemon">
+              <option value="">Ordenar</option>
               <option value="ordenaz" >A - Z</option>
               <option value="ordenza" >Z - A</option>
              </select>
-            </li> 
-
-            <li>
-             <select class="tiposPokemon" id="tiposPokemon">
+          
+             <select class="seleccion" id="tiposPokemon">
               <option value="">Filtrado por tipo</option>
               <option value="Grass">Hierba</option>
               <option value="Poison">Veneno</option>
@@ -51,38 +41,22 @@
               <option value="Ghost">Fantasma</option>
               <option value="Dragon">Dragon</option>
              </select>
-            </li>
-            <li>
-             <button id="botonPromedio">Promedio del peso de los Pokemones</button>
-            </li>
-
-            </ul>
-             </div>
-          </nav>
+             
+             <button id="limpiar" class="btn"> Limpiar </button>
+             <button id="botonPromedio">Promedio del peso </button>
+         </div>
       </div>      
+
     </header>
           <main>
-            <section id="banner">
-            <img src="pokemon/fondopokemon.jpg"/>
-            <div class="principal">
-            <h2>Historia Pokemon</h2>
-            <p>Cuando el creador, Satoshi Tajiri, 
-              era joven, uno de sus pasatiempos 
-              favoritos era la recolección y colección 
-              de insectos.8​ Tajiri se dirigió a la ciudad 
-              de Tokio a estudiar, ya que su padre quería 
-              que fuese ingeniero.</p>
-            <a href="https://es.wikipedia.org/wiki/Pokémon" target="_blank">Leer más</a>
-            </div>
-            </section>
+
             <p id="resultPromedio">
             </p>
                     
-    
-    <div id="container">
+    <div id="container" class="contenedor center">
     </div>
           </main>  
-          <footer>
+          <footer class="center">
           <a href=""></a>
           <a href=""></a>
           <a href=""></a>
