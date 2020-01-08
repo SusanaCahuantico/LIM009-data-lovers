@@ -88,6 +88,7 @@ background: #c7033e;
 color: white;
 }
 
+
  /*Mobile First */
  @media (min-width: 320px){
   .contenedor{

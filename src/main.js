@@ -14,7 +14,7 @@ const listaDePokemones = (data) => {
   let mostrar = '';
   for (let i = 0; i < data.length; i++) {
     let box = `
-    <div>
+    <div class="card">
 	<img  src="${ data[i].img}"/>
 	<p> Nombre : ${ data[i].name}</p>
 	<p> Tipo : ${ data[i].type}</p>
