@@ -10,12 +10,14 @@
     "test": "jest --coverage"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.9",
     "chai": "^4.2.0",
     "eslint": "^5.9.0",
     "eslint-plugin-jest": "^22.1.2",
     "htmlhint": "^0.10.1",
     "jest": "^24.7.1",
     "jshint": "^2.10.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "tailwindcss": "^4.0.9"
   }
 }

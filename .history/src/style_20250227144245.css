@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url(css/menu.css);
+@import url(css/banner.css);
+
+
+.divisor{  
+height: 70px;
+background-color: #313131;
+}
+      
+body{
+font-family: 'Open Sans', sans-serif;
+background: url(http://wallpapercanyon.com/wp-content/uploads/2016/01/White-Wallpaper-19.jpg);
+border: 1px solid #000000;
+}
+
+.contenedor{
+display: grid;
+grid-column-gap: 40px;
+grid-row-gap: 10px;
+padding: 50px;
+}
+
+footer{
+display: grid;
+padding: 30px;
+}
+
+.center{
+text-align: center;
+}
+
+.hidden{
+display:block;
+ }
+ 
+.video {
+width: 100%;
+height: auto;
+}
+
+.btn, .seleccion{
+background-color: rgba(27, 29, 27, 0.637); /* Green */
+border-radius: 12px;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* FOOTER 2 -BOTONES */
+.fa {
+padding: 18px;
+font-size: 70px;
+width: 18px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 50%;
+}
+    
+.fa:hover {
+opacity: 0.7;
+}
+    
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+    
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+    
+.fa-youtube {
+background: #bb0000;
+color: white;
+}
+      
+.fa-instagram {
+background: #c7033e;
+color: white;
+}
+
+
+ /*Mobile First */
+ @media (min-width: 320px){
+  .contenedor{
+    grid-template-columns: auto;
+    }
+  .img{
+    width: 300px;
+    height: auto;
+  }
+  .imagenLogo{width :200px; height:120px;}
+ }
+ 
+ @media (min-width: 768px) {
+  .contenedor{
+    grid-template-columns: auto auto;
+    }
+  footer{
+    grid-template-columns: 1fr 1fr;
+    }
+  .imagenLogo{width :400px; height:230px;}
+  .img{width: 600px}
+ }
+ 
+ @media (min-width: 1024px) {
+  .contenedor{
+    grid-template-columns: auto auto auto;
+    }
+  footer{
+    grid-template-columns: 1fr 1fr;
+    }
+  .imagenLogo{width :400px; height:230px;}
+  .img{width: 600px}
+ }

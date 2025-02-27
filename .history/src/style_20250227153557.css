@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url(css/menu.css);
+@import url(css/banner.css);
+
+
+.divisor{  
+height: 70px;
+background-color: #313131;
+}
+      
+/* Estilos generales */
+body {
+  font-family: 'Luckiest Guy', cursive;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background-color: #ffcb05; /* Amarillo Pokémon */
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 3rem;
+  color: #3b4cca; /* Azul Pokémon */
+  margin: 0;
+}
+
+.author {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn, .selection {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #3b4cca; /* Azul Pokémon */
+  color: white;
+}
+
+.btn:hover {
+  background-color: #2a3a9a;
+}
+
+.selection {
+  background-color: white;
+  border: 2px solid #3b4cca;
+}
+
+/* Lista de Pokémon */
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.pokemon-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.pokemon-card h3 {
+  font-size: 1.5rem;
+  color: #3b4cca;
+  margin: 0 0 10px;
+}
+
+.pokemon-card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+}
+
+.contenedor{
+display: grid;
+grid-column-gap: 40px;
+grid-row-gap: 10px;
+padding: 50px;
+}
+
+.center{
+text-align: center;
+}
+
+.hidden{
+display:block;
+ }
+ 
+.video {
+width: 100%;
+height: auto;
+}
+
+.btn, .seleccion{
+background-color: rgba(27, 29, 27, 0.637); /* Green */
+border-radius: 12px;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* FOOTER 2 -BOTONES */
+.fa {
+padding: 18px;
+font-size: 70px;
+width: 18px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 50%;
+}
+    
+.fa:hover {
+opacity: 0.7;
+}
+    
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+    
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+    
+.fa-youtube {
+background: #bb0000;
+color: white;
+}
+      
+.fa-instagram {
+background: #c7033e;
+color: white;
+}
+
+
+ /*Mobile First */
+ @media (min-width: 320px){
+  .contenedor{
+    grid-template-columns: auto;
+    }
+  .img{
+    width: 300px;
+    height: auto;
+  }
+  .imagenLogo{width :200px; height:120px;}
+ }
+ 
+ @media (min-width: 768px) {
+  .contenedor{
+    grid-template-columns: auto auto;
+    }
+  footer{
+    grid-template-columns: 1fr 1fr;
+    }
+  .imagenLogo{width :400px; height:230px;}
+  .img{width: 600px}
+ }
+ 
+ @media (min-width: 1024px) {
+  .contenedor{
+    grid-template-columns: auto auto auto;
+    }
+  footer{
+    grid-template-columns: 1fr 1fr;
+    }
+  .imagenLogo{width :400px; height:230px;}
+  .img{width: 600px}
+ }
