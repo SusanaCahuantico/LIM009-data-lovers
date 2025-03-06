@@ -22,8 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = mostrar;
   };
 
+  // Mostrar los Pokémon automáticamente al cargar la página
   listaDePokemones(arrListaPokemones);
 
+  // Eventos para filtrado, ordenamiento y promedio
   orden.addEventListener('change', () => listaDePokemones(pokemon.ordenPokemones(allData, orden.value)));
   pokemonesFiltrados.addEventListener('change', () => listaDePokemones(pokemon.filtrarPokemones(allData, pokemonesFiltrados.value)));
   botonPromedio.addEventListener('click', () => {
